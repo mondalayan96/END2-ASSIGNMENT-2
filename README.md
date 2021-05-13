@@ -1,6 +1,6 @@
 # END2-ASSIGNMENT-2
 
-![](ExcelScreenshot.png)
+<kbd> <img src="https://github.com/mondalayan96/END2-ASSIGNMENT-2/blob/main/ExcelScreenshot.png" /></kbd>
 ![](NeuralNetwork.png)
 
 ## For Forward Propagation:

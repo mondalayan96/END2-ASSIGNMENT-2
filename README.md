@@ -1,6 +1,6 @@
 # END2-ASSIGNMENT-2
 
-![](RackMultipart20210513-4-6foywv_html_84a73c66ed52ec91.png)
+![](neural_network.png)
 
 **For Forward Propagation:**
 

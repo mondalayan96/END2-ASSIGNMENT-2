@@ -1,6 +1,6 @@
 # END2-ASSIGNMENT-2
 
-
+![](ExcelScreenshot.png)
 ![](NeuralNetwork.png)
 
 ## For Forward Propagation:

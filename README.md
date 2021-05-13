@@ -1,7 +1,7 @@
 # END2-ASSIGNMENT-2
 
 
-![](neural_network.PNG)
+![](NeuralNetwork.png)
 
 **For Forward Propagation:**
 

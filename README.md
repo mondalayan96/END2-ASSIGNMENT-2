@@ -133,24 +133,12 @@ By chain rule we can write,
 
 ∂(E\_Total) / ∂w4 = ∂E\_Total/∂a\_h2 \* ∂a\_h2/∂w4
 
-= ∂E\_Total/∂a\_o2 \* ∂a\_o2/∂o2 \* ∂o2/∂a\_h2 \* ∂a\_h2/∂h2 \* ∂h2/∂w4 (As w4 is involved in updation of h2, which is involved in the updation of a\_h2,
+= ∂E\_Total/∂a\_o2 \* ∂a\_o2/∂o2 \* ∂o2/∂a\_h2 \* ∂a\_h2/∂h2 \* ∂h2/∂w4 (As w4 is involved in updation of h2, which is involved in the updation of a\_h2, which is involved in                                              updation of o1 and o2, which is involved in updation of a\_o1 and a\_o2 respectively, which in turn affects updation of E\_Total)
+= (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \* a\_h2 \* (1-a\_h2) \* i2
 
-which is involved in updation of o1 and o2, which is involved in updation of
-
-a\_o1 and a\_o2 respectively, which in turn affects updation of E\_Total)
-
-= (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \*
-
-a\_h2 \* (1-a\_h2) \* i2
-
-Thus, **∂E\_Total / ∂w4 = (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \***
-
-**a\_h2 \* (1-a\_h2) \* i2**
-
+Thus, **∂E\_Total / ∂w4 = (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \* a\_h2 \* (1-a\_h2) \* i2**
 - **w4 = w4 – learning\_rate \* (∂E\_Total/∂w4)**
-- **w4 = w4 – ղ \* (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6**
-
-**\* a\_h2 \* (1-a\_h2) \* i2**
+- **w4 = w4 – ղ \* (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \* a\_h2 \* (1-a\_h2) \* i2**
 
 1. To update w3 we need to calculate ∂E\_Total/ ∂w3
 
@@ -168,14 +156,9 @@ a \_o1 and a\_o2 respectively, which in turn affects updation of E\_Total)
 
 a\_h2 \* (1-a\_h2) \* i1
 
-Thus, **∂E\_Total / ∂w3= (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \***
-
-**a\_h2 \* (1-a\_h2) \* i1**
-
+Thus, **∂E\_Total / ∂w3= (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \* a\_h2 \* (1-a\_h2) \* i1**
 - **w3 = w3 – learning\_rate \* (∂E\_Total/∂w3)**
-- **w3 = w3– ղ \* (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6**
-
-**\* a\_h2 \* (1-a\_h2) \* i1**
+- **w3 = w3– ղ \* (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w8 + (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w6 \* a\_h2 \* (1-a\_h2) \* i1**
 
 1. To update w2 we need to calculate ∂E\_Total/ ∂w2
 
@@ -183,24 +166,13 @@ By chain rule we can write,
 
 ∂(E\_Total) / ∂w2 = ∂E\_Total/∂a\_h1 \* ∂a\_h1/∂w2
 
-= ∂E\_Total/∂a\_o1 \* ∂a\_o1/∂o1\* ∂o1/∂a\_h1 \* ∂a\_h1/∂h1 \* ∂h1/∂w1 (As w2 is involved in updation of h1, which is involved in the updation of a\_h1,
+= ∂E\_Total/∂a\_o1 \* ∂a\_o1/∂o1\* ∂o1/∂a\_h1 \* ∂a\_h1/∂h1 \* ∂h1/∂w1 (As w2 is involved in updation of h1, which is involved in the updation of a\_h1, which is involved in                                            updation of o1 and o2 respectively , which is involved in updation of a\_o1 and a\_o2, which in turn affects updation of E\_Total)
+= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1 \* (1-a\_h1) \* i2
 
-which is involved in updation of o1 and o2 respectively , which is involved in updation of
-
-a\_o1 and a\_o2, which in turn affects updation of E\_Total)
-
-= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \*
-
-a\_h1 \* (1-a\_h1) \* i2
-
-Thus, **∂E\_Total / ∂w2= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7****\***
-
-**a\_h1 \* (1-a\_h1) \* i2**
+Thus, **∂E\_Total / ∂w2= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1 \* (1-a\_h1) \* i2**
 
 - **w2 = w2 – learning\_rate \* (∂E\_Total/∂w2)**
-- **w2= w2– ղ \* (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \***
-
-**\* a\_h1\* (1-a\_h1) \* i2**
+- **w2= w2– ղ \* (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1\* (1-a\_h1) \* i2**
 
 1. To update w1 we need to calculate ∂E\_Total/ ∂w1
 
@@ -208,21 +180,11 @@ By chain rule we can write,
 
 ∂(E\_Total) / ∂w1 = ∂E\_Total/∂a\_h1 \* ∂a\_h1/∂w1
 
-= ∂E\_Total/∂a\_o1 \* ∂a\_o1/∂o1\* ∂o1/∂a\_h1 \* ∂a\_h1/∂h1 \* ∂h1/∂w1 (As w1is involved in updation of h1, which is involved in the updation of a\_h1,
+= ∂E\_Total/∂a\_o1 \* ∂a\_o1/∂o1\* ∂o1/∂a\_h1 \* ∂a\_h1/∂h1 \* ∂h1/∂w1 (As w1is involved in updation of h1, which is involved in the updation of a\_h1, which is involved in updation of o1 and o2, which is involved in updation of a\_o1 and a\_02 respectively, which in turn affects updation of E\_Total)
 
-which is involved in updation of o1 and o2, which is involved in updation of
+= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1 \* (1-a\_h1) \* i1
 
-a\_o1 and a\_02 respectively, which in turn affects updation of E\_Total)
-
-= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \*
-
-a\_h1 \* (1-a\_h1) \* i1
-
-Thus, **∂E\_Total / ∂w1= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7****\***
-
-**a\_h1 \* (1-a\_h1) \* i1**
+Thus, **∂E\_Total / ∂w1= (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1 \* (1-a\_h1) \* i1**
 
 - **w1 = w1 – learning\_rate \* (∂E\_Total/∂w1)**
-- **w1= w1– ղ \* (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \***
-
-**\* a\_h1\* (1-a\_h1) \* i1**
+- **w1= w1– ղ \* (a\_o1-t1) \* a\_o1\*(1-a\_o1) \* w5 + (a\_o2-t2) \* a\_o2\*(1-a\_o2) \* w7 \* a\_h1\* (1-a\_h1) \* i1**
